@@ -22,5 +22,7 @@ WHERE
 ---------------------------------------------- NOTES --------------------------------------------
 --> employeees who have the highest salary in each of the departments
 ------------------------------------------- OPTIMIZATION ----------------------------------------
---> For now, I'm using '*' to pull all the columns from Employee Table since I need all the columns in the table. If the table schema changes, I will update my code to pull only the necessary columns
+--> For now, I'm using '*' to pull all the columns from Employee Table since I need 
+--- all the columns in the table. If the table schema changes, I will update my code to pull 
+--- only the necessary columns
 -------------------------------------------------------------------------------------------------
