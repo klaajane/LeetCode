@@ -1,6 +1,6 @@
 --------------------------------------------- SOLUTION -------------------------------------------
 SELECT 
-    IFNULL(MAX(salary), NULL) AS SecondHighestSalary 
+    MAX(salary) AS SecondHighestSalary 
 FROM 
     (SELECT DISTINCT salary FROM Employee) AS distinct_salaries
 WHERE 
