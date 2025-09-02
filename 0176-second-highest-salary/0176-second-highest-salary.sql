@@ -10,5 +10,4 @@ WHERE
 --> return NULL when no 2nd highest salary exists
 ------------------------------------------- OPTIMIZATION ----------------------------------------
 --> DISTINCT & Subquery: limit unecessary checks, in case the data contains duplicates
---> IFNULL: Handles edge cases if the data only contains one salary
 -------------------------------------------------------------------------------------------------
