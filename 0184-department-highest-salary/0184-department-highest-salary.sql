@@ -1,10 +1,8 @@
 --------------------------------------------- SOLUTION ------------------------------------------
 WITH ranked_salaries AS (
     SELECT 
-         departmentID
-        ,name
-        ,salary
-        ,DENSE_RANK() OVER (PARTITION BY departmentID 
+        *,
+        DENSE_RANK() OVER (PARTITION BY departmentID 
                             ORDER BY salary DESC) AS rank
     FROM
         Employee)
