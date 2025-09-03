@@ -21,8 +21,7 @@ FROM
 LEFT JOIN
     activity a
     ON ft.player_id = a.player_id
-    AND
-    a.event_date = first_login_date + INTERVAL '1 day'
+    AND a.event_date = first_login_date + INTERVAL '1 day'
 ---------------------------------------------- NOTES --------------------------------------------
 --> fraction of players who logged in again after the day they first logged in
 --> round to 2 decimal places
