@@ -10,10 +10,12 @@ SELECT
         WHEN RIGHT(dna_sequence, 3) IN ('TAA','TAG','TGA') THEN 1 ELSE 0
     END AS "has_stop",
     CASE
-        WHEN dna_sequence ~ 'ATAT' THEN 1 ELSE 0
+        WHEN dna_sequence LIKE '%ATAT%' THEN 1 ELSE 0
+        --WHEN dna_sequence ~ 'ATAT' THEN 1 ELSE 0
     END AS "has_atat",
     CASE
-        WHEN dna_sequence ~ 'G{3,}' THEN 1 ELSE 0
+        WHEN dna_sequence LIKE '%GGG%' THEN 1 ELSE 0
+        --WHEN dna_sequence ~ 'G{3,}' THEN 1 ELSE 0
     END AS "has_ggg"
 FROM
     samples
@@ -22,4 +24,6 @@ FROM
 --> Sequences that end with either TAA, TAG, or TGA (stop codons)
 --> Sequences containing the motif ATAT (a simple repeated pattern)
 --> Sequences that have at least 3 consecutive G (like GGG or GGGG)
--------------------------------------------------------------------------------------------------
+------------------------------------------ OPTIMZATINON -----------------------------------------
+--> the above query was slow, here's some tips I found to optimize it:
+--> Regex '~' is performance taxing. Use LIKE instead
