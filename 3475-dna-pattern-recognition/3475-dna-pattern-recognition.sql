@@ -5,7 +5,7 @@ SELECT
     species,
     --- ATG Condition:
     CASE
-        WHEN LEFT(dna_sequence, 3) = 'ATG' THEN 1 ELSE 0
+        WHEN dna_sequence LIKE 'ATG%' THEN 1 ELSE 0
     END AS "has_start",
     --- TAA, TAG, TGA Condition:
     CASE
@@ -31,6 +31,6 @@ ORDER BY
 --> Sequences containing the motif ATAT (a simple repeated pattern)
 --> Sequences that have at least 3 consecutive G (like GGG or GGGG)
 ------------------------------------------ OPTIMZATINON -----------------------------------------
---> the above query was slow, here's some tips I found to optimize it:
+--> the above query was slow first time I ran it, here's some a tip I found to optimize it:
 --> Regex '~' is performance taxing. Use LIKE instead
 -------------------------------------------------------------------------------------------------
