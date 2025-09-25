@@ -3,22 +3,28 @@ SELECT
     sample_id,
     dna_sequence,
     species,
+    --- ATG Condition:
     CASE
         WHEN LEFT(dna_sequence, 3) = 'ATG' THEN 1 ELSE 0
     END AS "has_start",
+    --- TAA, TAG, TGA Condition:
     CASE
         WHEN RIGHT(dna_sequence, 3) IN ('TAA','TAG','TGA') THEN 1 ELSE 0
     END AS "has_stop",
+    --- ATAT Condition:
     CASE
-        WHEN dna_sequence LIKE '%ATAT%' THEN 1 ELSE 0
+        WHEN dna_sequence LIKE '%ATAT%' THEN 1 ELSE 0 -- helped optimize the query
         --WHEN dna_sequence ~ 'ATAT' THEN 1 ELSE 0
     END AS "has_atat",
+    --- GGG Condition:
     CASE
-        WHEN dna_sequence LIKE '%GGG%' THEN 1 ELSE 0
+        WHEN dna_sequence LIKE '%GGG%' THEN 1 ELSE 0 -- helped optimize the query
         --WHEN dna_sequence ~ 'G{3,}' THEN 1 ELSE 0
     END AS "has_ggg"
 FROM
     samples
+ORDER BY
+    sample_id
 ---------------------------------------------- NOTES --------------------------------------------
 --> Sequences that start with ATG (a common start codon)
 --> Sequences that end with either TAA, TAG, or TGA (stop codons)
@@ -27,3 +33,4 @@ FROM
 ------------------------------------------ OPTIMZATINON -----------------------------------------
 --> the above query was slow, here's some tips I found to optimize it:
 --> Regex '~' is performance taxing. Use LIKE instead
+-------------------------------------------------------------------------------------------------
