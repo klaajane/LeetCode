@@ -9,7 +9,10 @@ SELECT
     END AS "has_start",
     --- TAA, TAG, TGA Condition:
     CASE
-        WHEN RIGHT(dna_sequence, 3) IN ('TAA','TAG','TGA') THEN 1 ELSE 0
+        WHEN dna_sequence LIKE '%TAA'
+          OR dna_sequence LIKE '%TAG'
+          OR dna_sequence LIKE '%TGA'
+        THEN 1 ELSE 0
     END AS "has_stop",
     --- ATAT Condition:
     CASE
