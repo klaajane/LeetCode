@@ -1,13 +1,18 @@
 -------------------------------------------- SOLUTION -------------------------------------------
 WITH ordered_ratings AS (SELECT
-    employee_id,
-    rating,
-    COALESCE(LEAD(rating, 2) OVER (PARTITION BY employee_id ORDER BY review_date ASC), rating) AS third_score,
-    LAG(rating, 1) OVER (PARTITION BY employee_id ORDER BY review_date ASC) AS second_score,
-    LAG(rating, 2) OVER (PARTITION BY employee_id ORDER BY review_date ASC) AS first_score,
-    ROW_NUMBER() OVER (PARTITION BY employee_id ORDER BY review_date DESC) AS r_num
-FROM
-    performance_reviews)
+                            employee_id,
+                            rating,
+                            COALESCE(LEAD(rating, 2) OVER (PARTITION BY employee_id 
+                                                            ORDER BY review_date ASC)
+                                    ,rating) AS third_score,
+                            LAG(rating, 1) OVER (PARTITION BY employee_id 
+                                                 ORDER BY review_date ASC) AS second_score,
+                            LAG(rating, 2) OVER (PARTITION BY employee_id 
+                                                 ORDER BY review_date ASC) AS first_score,
+                            ROW_NUMBER() OVER (PARTITION BY employee_id 
+                                               ORDER BY review_date DESC) AS r_num
+                        FROM
+                            performance_reviews)
 SELECT
     o.employee_id,
     e.name,
