@@ -1,15 +1,19 @@
 -------------------------------------------- SOLUTION -------------------------------------------
-WITH polarized_opinion AS (
-    SELECT
-        book_id,
-        MAX(session_rating) - MIN(session_rating) AS rating_spread,
-        COUNT(*) AS session_count,
-        COUNT(*) FILTER (WHERE session_rating >= 4 OR session_rating <= 2) AS extreme_count,
-        COUNT(*) FILTER (WHERE session_rating >= 4) AS high_extreme,
-        COUNT(*) FILTER (WHERE session_rating <= 2) AS low_extreme
-    FROM reading_sessions
-    GROUP BY book_id
-)
+WITH polarized_opinion AS (SELECT
+                                book_id,
+                                COUNT(*) AS "reading_session_count",
+                                MAX(session_rating) - MIN(session_rating) AS "rating_spread",
+                                ROUND(1.00 * COUNT(*) FILTER (WHERE session_rating >= 4 
+                                                                 OR session_rating <= 2)
+                                             / 
+                                             COUNT(*)
+                                    ,2) AS "polarization_score",
+                                COUNT(*) FILTER (WHERE session_rating >= 4) AS "highest_extreme",
+                                COUNT(*) FILTER (WHERE session_rating <= 2) AS "lowest_extreme"
+                            FROM    
+                                reading_sessions
+                            GROUP BY
+                                1)
 SELECT
     p.book_id,
     b.title,
@@ -17,20 +21,20 @@ SELECT
     b.genre,
     b.pages,
     p.rating_spread,
-    ROUND(p.extreme_count * 1.0 / p.session_count, 2) AS polarization_score
+    P.polarization_score
 FROM
     polarized_opinion p
-JOIN
+INNER JOIN
     books b ON b.book_id = p.book_id
 WHERE
-    p.session_count >= 5
-    AND p.extreme_count * 1.0 / p.session_count >= 0.6
-    AND p.high_extreme > 0
-    AND p.low_extreme > 0
+    p.reading_session_count >= 5
+    AND
+    p.polarization_score >= 0.6
+    AND
+    (p.highest_extreme != 0 AND p.lowest_extreme != 0)
 ORDER BY
-    polarization_score DESC,
-    b.title DESC;
-
+    p.polarization_score DESC,
+    b.title DESC
 ---------------------------------------------- NOTES --------------------------------------------
 --> polarized opinions: books that receive both very high/low ratings from different readers
 --> only include books that have at least 5 reading sessions
