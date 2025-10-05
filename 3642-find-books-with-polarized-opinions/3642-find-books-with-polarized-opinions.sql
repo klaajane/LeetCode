@@ -3,11 +3,8 @@ WITH polarized_opinion AS (SELECT
                                 book_id,
                                 COUNT(*) AS "reading_session_count",
                                 MAX(session_rating) - MIN(session_rating) AS "rating_spread",
-                                ROUND(1.00 * COUNT(*) FILTER (WHERE session_rating >= 4 
-                                                                 OR session_rating <= 2)
-                                             / 
-                                             COUNT(*)
-                                    ,2) AS "polarization_score",
+                                COUNT(*) FILTER (WHERE session_rating >= 4 
+                                                    OR session_rating <= 2) AS "extreme_count",
                                 COUNT(*) FILTER (WHERE session_rating >= 4) AS "highest_extreme",
                                 COUNT(*) FILTER (WHERE session_rating <= 2) AS "lowest_extreme"
                             FROM    
@@ -21,7 +18,7 @@ SELECT
     b.genre,
     b.pages,
     p.rating_spread,
-    P.polarization_score
+    ROUND(1.0 * p.extreme_count / p.reading_session_count, 2) AS "polarization_score"
 FROM
     polarized_opinion p
 INNER JOIN
@@ -29,11 +26,11 @@ INNER JOIN
 WHERE
     p.reading_session_count >= 5
     AND
-    p.polarization_score >= 0.6
+    1.0 * p.extreme_count / p.reading_session_count >= 0.6
     AND
     (p.highest_extreme != 0 AND p.lowest_extreme != 0)
 ORDER BY
-    p.polarization_score DESC,
+    polarization_score DESC,
     b.title DESC
 ---------------------------------------------- NOTES --------------------------------------------
 --> polarized opinions: books that receive both very high/low ratings from different readers
