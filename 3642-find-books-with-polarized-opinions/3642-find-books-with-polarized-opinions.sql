@@ -2,13 +2,15 @@
 WITH polarized_opinion AS (SELECT
                                 book_id,
                                 MAX(session_rating) - MIN(session_rating) AS "rating_spread",
-                                ROUND(1.00 * SUM(CASE WHEN session_rating >= 4 OR session_rating <= 2
-                                        THEN 1
-                                        ELSE 0
-                                    END)
-                                /
-                                COUNT(*)
-                                ,2) AS "polarization_score",
+                                ROUND(1.00 * SUM(CASE WHEN session_rating >= 4 
+                                                           OR 
+                                                           session_rating <= 2
+                                                      THEN 1
+                                                      ELSE 0
+                                                END)
+                                            /
+                                            COUNT(*)
+                                    ,2) AS "polarization_score",
                                 COUNT(*) AS "reading_session_count",
                                 SUM(CASE WHEN session_rating >= 4
                                         THEN 1
@@ -42,7 +44,7 @@ WHERE
     p.polarization_score >= 0.6
     AND
     (p.highest_extreme != 0 AND p.lowest_extreme != 0)
-    ORDER BY
+ORDER BY
     p.polarization_score DESC,
     b.title DESC
 ---------------------------------------------- NOTES --------------------------------------------
