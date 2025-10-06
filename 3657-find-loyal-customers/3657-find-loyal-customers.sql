@@ -16,7 +16,7 @@ FROM
 WHERE
     activity_duration >= 30
     AND purchase_transaction_count >= 3
-    AND (refund_transaction_count * 1.0 / transaction_count) * 100 < 20
+    AND (refund_transaction_count 1.0 / transaction_count) < 0.2
 ORDER BY
     customer_id ASC
 ---------------------------------------------- NOTES --------------------------------------------
