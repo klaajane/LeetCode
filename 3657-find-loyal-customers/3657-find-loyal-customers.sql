@@ -18,7 +18,7 @@ WHERE
     AND purchase_transaction_count >= 3
     AND (refund_transaction_count * 1.0 / transaction_count) * 100 < 20
 ORDER BY
-    customer_id ASC)
+    customer_id ASC
 ---------------------------------------------- NOTES --------------------------------------------
 --> find loyal customers:
 --> at least 3 purchases
