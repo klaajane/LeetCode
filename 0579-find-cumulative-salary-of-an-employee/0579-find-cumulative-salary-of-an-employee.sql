@@ -1,24 +1,16 @@
 -------------------------------------------- SOLUTION -------------------------------------------
-WITH cum_salary_metrics AS (SELECT
-                                id,
-                                month,
-                                salary,
-                                SUM(Salary) OVER (PARTITION BY id
-                                                    ORDER BY month
-                                                    RANGE BETWEEN 2 PRECEDING 
-                                                        AND CURRENT ROW),
-                                ROW_NUMBER() OVER (PARTITION BY id
-                                                    ORDER BY month DESC) AS month_rnk
-                            FROM
-                                Employee)
 SELECT
     id,
     month,
-    sum AS "salary"
+    SUM(Salary) OVER (PARTITION BY id
+                        ORDER BY month
+                        RANGE BETWEEN 2 PRECEDING 
+                                AND CURRENT ROW)
+    AS "Salary"
 FROM
-    cum_salary_metrics
+    Employee
 WHERE
-    month_rnk != 1
+    (id, month) NOT IN (SELECT id, MAX(month) FROM Employee GROUP BY id)
 ORDER BY
     id, month DESC
 ---------------------------------------------- NOTES --------------------------------------------
