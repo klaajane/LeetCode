@@ -1,15 +1,21 @@
 -------------------------------------------- SOLUTION -------------------------------------------
-SELECT 
-    e1.employee_id
-FROM 
-    Employees e1
-LEFT JOIN 
-    Employees e2
-    ON e1.manager_id = e2.employee_id
-LEFT JOIN Employees e3
-    ON e2.manager_id = e3.employee_id
-WHERE 
-    e3.manager_id = 1 AND e1.employee_id != 1
+WITH recursive report AS (
+    --- base query: direct reports to the heads
+    SELECT * FROM employees 
+    WHERE manager_id = 1 
+    AND employee_id != manager_id
+
+    UNION ALL
+    --- recursive case: indirect reports to the head
+    SELECT e.* FROM employees e
+    JOIN report r ON e.manager_id = r.employee_id
+    WHERE e.employee_id != e.manager_id
+)
+
+SELECT DISTINCT
+    employee_id
+FROM report
+ORDER BY employee_id
 ---------------------------------------------- NOTES --------------------------------------------
 --> find employee_id of all employees that directly/indirectly report their work to main boss
 --> indirect relation between managers won't exceed 3 managers
