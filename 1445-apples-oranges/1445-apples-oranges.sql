@@ -1,9 +1,9 @@
 --------------------------------------------- SOLUTION ------------------------------------------
 SELECT
     sale_date,
-    SUM(sold_num) FILTER (WHERE fruit = 'apples')
+    SUM(CASE WHEN fruit = 'apples' THEN sold_num END)
     -
-    SUM(sold_num) FILTER (WHERE fruit = 'oranges')
+    SUM(CASE WHEN fruit = 'oranges' THEN sold_num END)
     AS "diff"
 FROM
     Sales
