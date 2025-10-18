@@ -1,27 +1,11 @@
 --------------------------------------------- SOLUTION ------------------------------------------
-WITH calls_records AS (
-    SELECT
-        CASE
-            WHEN from_id > to_id THEN to_id
-            ELSE from_id
-        END AS "person1",
-
-        CASE
-            WHEN from_id < to_id THEN to_id
-            ELSE from_id
-        END AS "person2",
-        
-        duration
-    FROM
-        calls)
-
 SELECT
-    person1,
-    person2,
+    LEAST(from_id, to_id) "person1",
+    GREATEST(from_id, to_id) "person2",
     COUNT(*) "call_count",
     SUM(duration) "total_duration"
 FROM
-    calls_records
+    calls
 GROUP BY 1, 2
 ---------------------------------------------- NOTES --------------------------------------------
 --> report # of calls and call duration between each pair of disinct people
