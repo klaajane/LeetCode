@@ -22,7 +22,7 @@ active_drivers1 AS (
         d.driver_id,
         COUNT(d.joined_month) AS "monthly_active_drivers"
     FROM
-        (SELECT month FROM generate_series(1, 12) "month") m -- generate the series of months
+        (SELECT month FROM generate_series(1, 12) "month") m -- generate the serie for the months needed
     LEFT JOIN
         drivers_history d
         ON m.month = d.joined_month
@@ -40,7 +40,6 @@ rides_history AS (
     SELECT
         ride_id,
         user_id,
-        ---EXTRACT(YEAR FROM requested_at) "year",
         EXTRACT(MONTH FROM requested_at) AS "requested_month"
     FROM
         rides
@@ -51,7 +50,8 @@ accepted_ride1 AS (
     SELECT
         a.ride_id,
         a.driver_id,
-        --r.ride_id,
+        --r.ride_id, -- causes the duplication later on during the join
+                     -- SQL treats duplicates as seperate rows
         r.requested_month
     FROM
         rides_history r
@@ -59,15 +59,16 @@ accepted_ride1 AS (
         AcceptedRides a
         ON r.ride_id = a.ride_id),
 
+ ---needs to aggregate rows from accepted_rides before joining to avoid duplication
 accepted_rides_counts AS (
     SELECT 
         requested_month AS "month",
         COUNT(*) AS "accepted_rides"
     FROM
         accepted_ride1
-    GROUP BY requested_month),
+    GROUP BY requested_month)
 
-answer as (SELECT DISTINCT
+SELECT DISTINCT
     a.month,
     a.active_drivers,
     COALESCE(accepted_rides, 0) AS "accepted_rides"
@@ -77,9 +78,7 @@ LEFT JOIN
     accepted_rides_counts ar
     ON ar.month = a.month 
 ORDER BY 
-    a.month ASC)
-
-SELECT * FROM answer
+    a.month ASC
 ---------------------------------------------- NOTES --------------------------------------------
 --> # of Hopper drivers by the end of the month (active_drivers)
 --> # of accepted rides in that month (accepted ride)
