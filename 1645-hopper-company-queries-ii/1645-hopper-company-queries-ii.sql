@@ -1,3 +1,4 @@
+------------------------------------------------- SOLUTION ---------------------------------------------
 WITH drivers_by_month AS (
     SELECT
        driver_id,
@@ -68,3 +69,7 @@ FROM
 LEFT JOIN
     accepeted_rides_count ar
     ON ar.month = ad.month
+------------------------------------------------ NOTES ----------------------------------------------
+--> compute working drivers pct
+--> pct month = # of accepted rides / # available drivers  * 100.0
+-----------------------------------------------------------------------------------------------------
