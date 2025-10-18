@@ -5,10 +5,12 @@ WITH calls_records AS (
             WHEN from_id > to_id THEN to_id
             ELSE from_id
         END AS "person1",
+
         CASE
             WHEN from_id < to_id THEN to_id
             ELSE from_id
         END AS "person2",
+        
         duration
     FROM
         calls)
