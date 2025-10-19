@@ -2,7 +2,7 @@
 WITH transactions_ranked_by_amount AS (
     SELECT
         transaction_id,
-        TO_CHAR(day, 'YYYY-MM-DD') AS "day",
+        day,
         RANK() OVER (PARTITION BY DATE(day) ORDER BY amount DESC) AS "transaction_rnk"
     FROM
         transactions)
