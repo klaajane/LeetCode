@@ -4,7 +4,7 @@ WITH transactions_ranked_by_amount AS (
         transaction_id,
         day,
         amount,
-        DENSE_RANK() OVER (PARTITION BY day ORDER BY amount DESC) AS "transaction_rnk"
+        RANK() OVER (PARTITION BY DATE(day) ORDER BY amount DESC) AS "transaction_rnk"
     FROM
         transactions)
 
