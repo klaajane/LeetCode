@@ -6,43 +6,21 @@ WITH all_calls AS (
     SELECT recipient_id "caller", caller_id "recipient", call_time FROM calls
 ),
 
--- Find first call:
-first_call AS (
+-- Find first / last call:
+calls_history AS (
     SELECT 
-        caller, recipient, call_time::DATE "date"
-    FROM (
-            SELECT
-                *,
-                ROW_NUMBER() OVER (PARTITION BY caller, call_time::DATE -- needs to convert to date
-                                    ORDER BY call_time ASC) "rnk"
-            FROM
-                all_calls
-            )
-    WHERE rnk = 1
-),
+        *,
+        first_value(recipient) OVER (PARTITION BY caller, call_time::DATE 
+                                        ORDER BY call_time ASC) "first_recipient",
+        first_value(recipient) OVER (PARTITION BY caller, call_time::DATE 
+                                        ORDER BY call_time DESC) "last_recipient"
+    FROM all_calls
+    ORDER BY caller
+)
 
--- Find last call:
-last_call AS (
-    SELECT 
-        caller, recipient, call_time::DATE "date"
-    FROM (
-            SELECT
-                *,
-                ROW_NUMBER() OVER (PARTITION BY caller, call_time::DATE -- needs to convert to date
-                                    ORDER BY call_time DESC) "rnk"
-            FROM
-                all_calls
-            )
-    WHERE rnk = 1)
-
-
-SELECT DISTINCT
-    f.caller "user_id"
-FROM
-    first_call f
-    JOIN last_call l
-        ON f.caller = l.caller
-        AND f.recipient = l.recipient
+SELECT DISTINCT caller "user_id" 
+FROM calls_history
+WHERE first_recipient = last_recipient
 ---------------------------------------------- NOTES --------------------------------------------
 --> report IDs of users whose first and last calls on any day were the same person
 -------------------------------------------------------------------------------------------------
