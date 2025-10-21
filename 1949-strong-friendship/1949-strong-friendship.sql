@@ -1,28 +1,37 @@
 -------------------------------------------- SOLUTION -------------------------------------------
-WITH Friends AS (
-    SELECT user1_id, user2_id FROM Friendship
-    UNION
-    SELECT user2_id, user1_id FROM Friendship
+WITH all_friends AS
+    (SELECT user1_id, user2_id FROM friendship
+        UNION ALL
+    SELECT user2_id, user1_id FROM friendship
 ),
-CommonFriends AS (
-    SELECT 
-        F1.user1_id AS user1_id,
-        F2.user1_id AS user2_id,
-        COUNT(*) AS common_friend
-    FROM Friends F1
-    JOIN Friends F2 ON F1.user2_id = F2.user2_id
-    WHERE F1.user1_id < F2.user1_id
-    GROUP BY F1.user1_id, F2.user1_id
-    HAVING COUNT(*) >= 3
+common_friends AS (
+    SELECT
+        a1.user1_id,
+        a2.user1_id "user2_id",
+        COUNT(DISTINCT a1.user2_id) AS common_friend
+    FROM
+        all_friends a1
+        JOIN
+            all_friends a2
+            -- retrieve only rows with common friends
+            ON a1.user2_id = a2.user2_id
+            -- avoid duplicates
+            AND a1.user1_id < a2.user1_id     
+    GROUP BY 1, 2
+    HAVING COUNT(DISTINCT a1.user2_id) >= 3
 )
-SELECT 
-    CF.user1_id, 
-    CF.user2_id, 
-    CF.common_friend
-FROM CommonFriends CF
-JOIN Friendship F ON CF.user1_id = F.user1_id AND CF.user2_id = F.user2_id
-ORDER BY CF.user1_id, CF.user2_id;
 
+SELECT
+    cf.user1_id,
+    cf.user2_id,
+    cf.common_friend
+FROM
+    common_friends cf
+    JOIN    
+        all_friends f
+        ON cf.user1_id = f.user1_id
+        AND cf.user2_id = f.user2_id
+ORDER BY 1, 2
 ---------------------------------------------- NOTES --------------------------------------------
 --> strong friendships: x and y have at least 3 common friends
 --> user1_id < user2_id to avoid duplicates
