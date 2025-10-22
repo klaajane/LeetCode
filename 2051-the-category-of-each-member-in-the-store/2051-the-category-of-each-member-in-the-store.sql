@@ -2,12 +2,7 @@
 WITH visit_metrics AS (
     SELECT
         v.member_id,
-            100.0 * SUM(CASE 
-                            WHEN p.visit_id IS NULL THEN 0
-                            ELSE 1
-                        END)
-                /
-            COALESCE(COUNT(*), 0) AS "conversion_rate"
+            100.0 * COUNT(p.visit_id) / COUNT(v.member_id) AS "conversion_rate"
     FROM
         visits v    
         LEFT JOIN 
