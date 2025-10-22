@@ -20,10 +20,10 @@ SELECT
     m.member_id,
     m.name,
     CASE 
-        WHEN vm.conversion_rate > 80 THEN 'Diamond'
+        WHEN vm.conversion_rate >= 80 THEN 'Diamond'
         WHEN vm.conversion_rate BETWEEN 50 AND 80 THEN 'Gold'
         WHEN vm.conversion_rate < 50 THEN 'Silver'
-        ELSE 'Bronze'
+        WHEN vm.conversion_rate IS NULL THEN 'Bronze'
     END AS "category"
 FROM
     Members m
