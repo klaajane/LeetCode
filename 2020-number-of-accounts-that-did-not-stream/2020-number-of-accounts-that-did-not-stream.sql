@@ -22,7 +22,7 @@ account_with_no_streams AS (
     WHERE
         EXTRACT(YEAR FROM s.stream_date) != '2021')
 
-SELECT COUNT(DISTINCT account_id) AS "accounts_count"
+SELECT COUNT(*) AS "accounts_count"
 FROM account_with_no_streams  
 ---------------------------------------------- NOTES --------------------------------------------
 --> report # of account that bought 2021 subscriptions, but didn't stream 
