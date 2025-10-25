@@ -17,7 +17,7 @@ SELECT
     gender
 FROM
     gender_ordered
-ORDER BY r_num ASC, gender_order ASC
+ORDER BY r_num, gender_order 
 ---------------------------------------------- NOTES --------------------------------------------
 --> rearrange the table in this order: female, other, male
 --> ID of each gender are arranged ASC
