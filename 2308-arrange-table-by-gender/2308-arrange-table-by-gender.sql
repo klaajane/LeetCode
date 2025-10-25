@@ -6,8 +6,8 @@ WITH gender_ordered AS (
         ROW_NUMBER() OVER (PARTITION BY gender
                             ORDER BY user_id ASC) "r_num",
         CASE WHEN gender = 'female' THEN 1
+             WHEN gender = 'other' THEN 2
              WHEN gender = 'male' THEN 3
-             ELSE 2
         END AS "gender_order"
     FROM
         Genders)
