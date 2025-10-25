@@ -2,13 +2,12 @@
 WITH degrees AS (
     SELECT
         city_id,
-        MIN(day) AS "day",
+        day,
         degree,
-        DENSE_RANK() OVER (PARTITION BY city_id
-                            ORDER BY degree DESC) AS "rnk"
+        ROW_NUMBER() OVER (PARTITION BY city_id
+                            ORDER BY degree DESC, day ASC) AS "rnk"
     FROM
-        Weather
-    GROUP BY 1, 3)
+        Weather)
 
 SELECT
     city_id,
