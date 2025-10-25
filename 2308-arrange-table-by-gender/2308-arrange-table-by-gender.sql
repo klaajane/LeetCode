@@ -1,23 +1,13 @@
 --------------------------------------------- SOLUTION ------------------------------------------
-WITH gender_ordered AS (
-    SELECT
-        user_id,
-        gender,
-        ROW_NUMBER() OVER (PARTITION BY gender
-                            ORDER BY user_id ASC) "r_num",
-        CASE WHEN gender = 'female' THEN 1
-             WHEN gender = 'other' THEN 2
-             WHEN gender = 'male' THEN 3
-        END AS "gender_order"
-    FROM
-        Genders)
-
-SELECT
-    user_id,
-    gender
-FROM
-    gender_ordered
-ORDER BY r_num, gender_order 
+with cte as (select user_id
+       , gender
+       , row_number() over (partition by gender order by user_id) rn
+from genders
+)
+select user_id
+        , gender
+from cte
+order by rn,  array_position(ARRAY['female', 'other', 'male'], gender)
 ---------------------------------------------- NOTES --------------------------------------------
 --> rearrange the table in this order: female, other, male
 --> ID of each gender are arranged ASC
