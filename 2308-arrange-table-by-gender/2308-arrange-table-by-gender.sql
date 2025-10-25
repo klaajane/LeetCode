@@ -1,0 +1,24 @@
+--------------------------------------------- SOLUTION ------------------------------------------
+WITH gender_ordered AS (
+    SELECT
+        user_id,
+        gender,
+        ROW_NUMBER() OVER (PARTITION BY gender
+                            ORDER BY user_id ASC) "r_num",
+        CASE WHEN gender = 'female' THEN 1
+             WHEN gender = 'male' THEN 3
+             ELSE 2
+        END AS "gender_order"
+    FROM
+        Genders)
+
+SELECT
+    user_id,
+    gender
+FROM
+    gender_ordered
+ORDER BY r_num ASC, gender_order ASC
+---------------------------------------------- NOTES --------------------------------------------
+--> rearrange the table in this order: female, other, male
+--> ID of each gender are arranged ASC
+-------------------------------------------------------------------------------------------------
