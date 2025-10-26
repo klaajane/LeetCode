@@ -20,9 +20,9 @@ FROM
     INNER JOIN  
         products pr
         ON pu.product_id = pr.product_id
-WHERE EXISTS (SELECT 1 FROM invoice_ranked i 
-              WHERE i.invoice_id = pu.invoice_id 
-              AND i.price_rnk = 1)
+WHERE pu.invoice_id IN (SELECT invoice_id 
+                        FROM invoice_ranked 
+                        WHERE price_rnk = 1)
 ---------------------------------------------- NOTES --------------------------------------------
 --> show details of the invoice with the highest price 
 --> two or more invoice have the same price => return the details of smallest invoice_id
