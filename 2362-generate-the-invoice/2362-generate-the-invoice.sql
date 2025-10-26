@@ -2,8 +2,6 @@
 WITH invoice_ranked AS (
     SELECT
         pu.invoice_id,
-        --pu.product_id,
-        ---pu.quantity,
         SUM(pr.price * pu.quantity) AS "total_price",
         DENSE_RANK() OVER (ORDER BY SUM(pr.price * pu.quantity) DESC, pu.invoice_id ASC) AS "price_rnk"
     FROM
