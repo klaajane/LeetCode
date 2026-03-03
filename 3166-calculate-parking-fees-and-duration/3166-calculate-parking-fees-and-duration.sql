@@ -30,5 +30,15 @@ GROUP BY sm.car_id, av.lot_id
 --> find where car spent hte most total time
 --> order by car_id ASC
 ---------------------------------------------THOUGHTS--------------------------------------------
--- 
+-- I need stats at two granularities — per car+lot to rank most-visited lot, but per car only
+-- for the final totals. That's why I need two CTEs instead of one.
+--
+-- First CTE groups by car_id + lot_id so I preserve lot-level time_spent. Collapsing to
+-- car_id too early would lose the detail I need for ranking.
+--
+-- Second CTE applies RANK() on top of that — partitioned by car_id, ordered by time_spent
+-- desc — so rnk = 1 gives me the lot each car spent the most time in.
+--
+-- Final SELECT re-aggregates to car level. I divide SUM(fee) / SUM(hours) rather than
+-- AVG(avg) — because averaging averages is wrong when time spent per lot varies.
 --------------------------------------------------------------------------------------------------
