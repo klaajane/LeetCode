@@ -14,4 +14,5 @@ Repository to store my answers for SQL LeetCode problems
 | [3214-year-on-year-growth-rate](https://github.com/klaajane/LeetCode/tree/main/3214-year-on-year-growth-rate/) | Hard |
 | [3230-customer-purchasing-behavior-analysis](https://github.com/klaajane/LeetCode/tree/main/3230-customer-purchasing-behavior-analysis/) | Medium |
 | [3252-premier-league-table-ranking-ii](https://github.com/klaajane/LeetCode/tree/main/3252-premier-league-table-ranking-ii/) | Medium |
+| [3268-find-overlapping-shifts-ii](https://github.com/klaajane/LeetCode/tree/main/3268-find-overlapping-shifts-ii/) | Hard |
 <!---LeetCode Topics End-->
