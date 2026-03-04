@@ -53,6 +53,4 @@ ORDER BY md.student_id
 --> acheived a grade A in all mandatory courses and at least B in elective courses
 --> maintained an average GPA of at least 2.5 across all courses
 --> order by student_id ASC
----------------------------------------------THOUGHTS--------------------------------------------
-
 -------------------------------------------------------------------------------------------------
