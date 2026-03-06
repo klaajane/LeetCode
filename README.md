@@ -16,4 +16,5 @@ Repository to store my answers for SQL LeetCode problems
 | [3252-premier-league-table-ranking-ii](https://github.com/klaajane/LeetCode/tree/main/3252-premier-league-table-ranking-ii/) | Medium |
 | [3268-find-overlapping-shifts-ii](https://github.com/klaajane/LeetCode/tree/main/3268-find-overlapping-shifts-ii/) | Hard |
 | [3278-find-candidates-for-data-scientist-position-ii](https://github.com/klaajane/LeetCode/tree/main/3278-find-candidates-for-data-scientist-position-ii/) | Medium |
+| [3293-calculate-product-final-price](https://github.com/klaajane/LeetCode/tree/main/3293-calculate-product-final-price/) | Medium |
 <!---LeetCode Topics End-->
