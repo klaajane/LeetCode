@@ -22,4 +22,5 @@ Repository to store my answers for SQL LeetCode problems
 | [3338-second-highest-salary-ii](https://github.com/klaajane/LeetCode/tree/main/3338-second-highest-salary-ii/) | Medium |
 | [3368-first-letter-capitalization](https://github.com/klaajane/LeetCode/tree/main/3368-first-letter-capitalization/) | Hard |
 | [3384-team-dominance-by-pass-success](https://github.com/klaajane/LeetCode/tree/main/3384-team-dominance-by-pass-success/) | Hard |
+| [3401-find-circular-gift-exchange-chains](https://github.com/klaajane/LeetCode/tree/main/3401-find-circular-gift-exchange-chains/) | Hard |
 <!---LeetCode Topics End-->
