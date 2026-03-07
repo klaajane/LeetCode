@@ -19,4 +19,5 @@ Repository to store my answers for SQL LeetCode problems
 | [3293-calculate-product-final-price](https://github.com/klaajane/LeetCode/tree/main/3293-calculate-product-final-price/) | Medium |
 | [3322-premier-league-table-ranking-iii](https://github.com/klaajane/LeetCode/tree/main/3322-premier-league-table-ranking-iii/) | Medium |
 | [3328-find-cities-in-each-state-ii](https://github.com/klaajane/LeetCode/tree/main/3328-find-cities-in-each-state-ii/) | Medium |
+| [3368-first-letter-capitalization](https://github.com/klaajane/LeetCode/tree/main/3368-first-letter-capitalization/) | Hard |
 <!---LeetCode Topics End-->
