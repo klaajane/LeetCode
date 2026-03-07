@@ -21,4 +21,5 @@ Repository to store my answers for SQL LeetCode problems
 | [3328-find-cities-in-each-state-ii](https://github.com/klaajane/LeetCode/tree/main/3328-find-cities-in-each-state-ii/) | Medium |
 | [3338-second-highest-salary-ii](https://github.com/klaajane/LeetCode/tree/main/3338-second-highest-salary-ii/) | Medium |
 | [3368-first-letter-capitalization](https://github.com/klaajane/LeetCode/tree/main/3368-first-letter-capitalization/) | Hard |
+| [3384-team-dominance-by-pass-success](https://github.com/klaajane/LeetCode/tree/main/3384-team-dominance-by-pass-success/) | Hard |
 <!---LeetCode Topics End-->
