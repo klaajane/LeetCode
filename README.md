@@ -8,6 +8,7 @@ Repository to store my answers for SQL LeetCode problems
 | ------- | ------- |
 | [0569-median-employee-salary](https://github.com/klaajane/LeetCode/tree/main/0569-median-employee-salary/) | Hard |
 | [0602-friend-requests-ii-who-has-the-most-friends](https://github.com/klaajane/LeetCode/tree/main/0602-friend-requests-ii-who-has-the-most-friends/) | Medium |
+| [1336-number-of-transactions-per-visit](https://github.com/klaajane/LeetCode/tree/main/1336-number-of-transactions-per-visit/) | Hard |
 | [3156-employee-task-duration-and-concurrent-tasks](https://github.com/klaajane/LeetCode/tree/main/3156-employee-task-duration-and-concurrent-tasks/) | Hard |
 | [3166-calculate-parking-fees-and-duration](https://github.com/klaajane/LeetCode/tree/main/3166-calculate-parking-fees-and-duration/) | Medium |
 | [3182-find-top-scoring-students](https://github.com/klaajane/LeetCode/tree/main/3182-find-top-scoring-students/) | Medium |
