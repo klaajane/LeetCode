@@ -14,6 +14,7 @@ Repository to store my answers for SQL LeetCode problems
 | [2084-drop-type-1-orders-for-customers-with-type-0-orders](https://github.com/klaajane/LeetCode/tree/main/2084-drop-type-1-orders-for-customers-with-type-0-orders/) | Medium |
 | [2112-the-airport-with-the-most-traffic](https://github.com/klaajane/LeetCode/tree/main/2112-the-airport-with-the-most-traffic/) | Medium |
 | [2238-number-of-times-a-driver-was-a-passenger](https://github.com/klaajane/LeetCode/tree/main/2238-number-of-times-a-driver-was-a-passenger/) | Medium |
+| [2292-products-with-three-or-more-orders-in-two-consecutive-years](https://github.com/klaajane/LeetCode/tree/main/2292-products-with-three-or-more-orders-in-two-consecutive-years/) | Medium |
 | [3156-employee-task-duration-and-concurrent-tasks](https://github.com/klaajane/LeetCode/tree/main/3156-employee-task-duration-and-concurrent-tasks/) | Hard |
 | [3166-calculate-parking-fees-and-duration](https://github.com/klaajane/LeetCode/tree/main/3166-calculate-parking-fees-and-duration/) | Medium |
 | [3182-find-top-scoring-students](https://github.com/klaajane/LeetCode/tree/main/3182-find-top-scoring-students/) | Medium |
