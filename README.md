@@ -41,4 +41,17 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0066-plus-one](https://github.com/klaajane/LeetCode/tree/main/0066-plus-one/) | Easy |
+| [0067-add-binary](https://github.com/klaajane/LeetCode/tree/main/0067-add-binary/) | Easy |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0067-add-binary](https://github.com/klaajane/LeetCode/tree/main/0067-add-binary/) | Easy |
+## Bit Manipulation
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0067-add-binary](https://github.com/klaajane/LeetCode/tree/main/0067-add-binary/) | Easy |
+## Simulation
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0067-add-binary](https://github.com/klaajane/LeetCode/tree/main/0067-add-binary/) | Easy |
 <!---LeetCode Topics End-->
