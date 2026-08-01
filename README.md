@@ -39,6 +39,7 @@ Repository to store my answers for SQL LeetCode problems
 | ------- | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/klaajane/LeetCode/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0066-plus-one](https://github.com/klaajane/LeetCode/tree/main/0066-plus-one/) | Easy |
+| [0189-rotate-array](https://github.com/klaajane/LeetCode/tree/main/0189-rotate-array/) | Medium |
 | [0283-move-zeroes](https://github.com/klaajane/LeetCode/tree/main/0283-move-zeroes/) | Easy |
 | [1394-find-lucky-integer-in-an-array](https://github.com/klaajane/LeetCode/tree/main/1394-find-lucky-integer-in-an-array/) | Easy |
 | [1480-running-sum-of-1d-array](https://github.com/klaajane/LeetCode/tree/main/1480-running-sum-of-1d-array/) | Easy |
@@ -48,6 +49,7 @@ Repository to store my answers for SQL LeetCode problems
 | [0066-plus-one](https://github.com/klaajane/LeetCode/tree/main/0066-plus-one/) | Easy |
 | [0067-add-binary](https://github.com/klaajane/LeetCode/tree/main/0067-add-binary/) | Easy |
 | [0069-sqrtx](https://github.com/klaajane/LeetCode/tree/main/0069-sqrtx/) | Easy |
+| [0189-rotate-array](https://github.com/klaajane/LeetCode/tree/main/0189-rotate-array/) | Medium |
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -96,5 +98,6 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/klaajane/LeetCode/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
+| [0189-rotate-array](https://github.com/klaajane/LeetCode/tree/main/0189-rotate-array/) | Medium |
 | [0283-move-zeroes](https://github.com/klaajane/LeetCode/tree/main/0283-move-zeroes/) | Easy |
 <!---LeetCode Topics End-->
