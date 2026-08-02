@@ -54,6 +54,7 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0067-add-binary](https://github.com/klaajane/LeetCode/tree/main/0067-add-binary/) | Easy |
+| [0383-ransom-note](https://github.com/klaajane/LeetCode/tree/main/0383-ransom-note/) | Easy |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -85,10 +86,12 @@ Repository to store my answers for SQL LeetCode problems
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0383-ransom-note](https://github.com/klaajane/LeetCode/tree/main/0383-ransom-note/) | Easy |
 | [1394-find-lucky-integer-in-an-array](https://github.com/klaajane/LeetCode/tree/main/1394-find-lucky-integer-in-an-array/) | Easy |
 ## Counting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0383-ransom-note](https://github.com/klaajane/LeetCode/tree/main/0383-ransom-note/) | Easy |
 | [1394-find-lucky-integer-in-an-array](https://github.com/klaajane/LeetCode/tree/main/1394-find-lucky-integer-in-an-array/) | Easy |
 ## Prefix Sum
 | Problem Name | Difficulty |
