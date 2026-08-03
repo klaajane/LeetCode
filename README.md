@@ -39,6 +39,7 @@ Repository to store my answers for SQL LeetCode problems
 | ------- | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/klaajane/LeetCode/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0066-plus-one](https://github.com/klaajane/LeetCode/tree/main/0066-plus-one/) | Easy |
+| [0167-two-sum-ii-input-array-is-sorted](https://github.com/klaajane/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0169-majority-element](https://github.com/klaajane/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0189-rotate-array](https://github.com/klaajane/LeetCode/tree/main/0189-rotate-array/) | Medium |
 | [0283-move-zeroes](https://github.com/klaajane/LeetCode/tree/main/0283-move-zeroes/) | Easy |
@@ -70,6 +71,7 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0069-sqrtx](https://github.com/klaajane/LeetCode/tree/main/0069-sqrtx/) | Easy |
+| [0167-two-sum-ii-input-array-is-sorted](https://github.com/klaajane/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -110,6 +112,7 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/klaajane/LeetCode/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
+| [0167-two-sum-ii-input-array-is-sorted](https://github.com/klaajane/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0189-rotate-array](https://github.com/klaajane/LeetCode/tree/main/0189-rotate-array/) | Medium |
 | [0283-move-zeroes](https://github.com/klaajane/LeetCode/tree/main/0283-move-zeroes/) | Easy |
 ## Divide and Conquer
