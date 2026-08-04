@@ -17,6 +17,7 @@ Repository to store my answers for SQL LeetCode problems
 | [2292-products-with-three-or-more-orders-in-two-consecutive-years](https://github.com/klaajane/LeetCode/tree/main/2292-products-with-three-or-more-orders-in-two-consecutive-years/) | Medium |
 | [3050-pizza-toppings-cost-analysis](https://github.com/klaajane/LeetCode/tree/main/3050-pizza-toppings-cost-analysis/) | Medium |
 | [3058-friends-with-no-mutual-friends](https://github.com/klaajane/LeetCode/tree/main/3058-friends-with-no-mutual-friends/) | Medium |
+| [3060-user-activities-within-time-bounds](https://github.com/klaajane/LeetCode/tree/main/3060-user-activities-within-time-bounds/) | Hard |
 | [3156-employee-task-duration-and-concurrent-tasks](https://github.com/klaajane/LeetCode/tree/main/3156-employee-task-duration-and-concurrent-tasks/) | Hard |
 | [3166-calculate-parking-fees-and-duration](https://github.com/klaajane/LeetCode/tree/main/3166-calculate-parking-fees-and-duration/) | Medium |
 | [3182-find-top-scoring-students](https://github.com/klaajane/LeetCode/tree/main/3182-find-top-scoring-students/) | Medium |
