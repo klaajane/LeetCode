@@ -51,6 +51,7 @@ Repository to store my answers for SQL LeetCode problems
 | [0643-maximum-average-subarray-i](https://github.com/klaajane/LeetCode/tree/main/0643-maximum-average-subarray-i/) | Easy |
 | [1394-find-lucky-integer-in-an-array](https://github.com/klaajane/LeetCode/tree/main/1394-find-lucky-integer-in-an-array/) | Easy |
 | [1480-running-sum-of-1d-array](https://github.com/klaajane/LeetCode/tree/main/1480-running-sum-of-1d-array/) | Easy |
+| [1493-longest-subarray-of-1s-after-deleting-one-element](https://github.com/klaajane/LeetCode/tree/main/1493-longest-subarray-of-1s-after-deleting-one-element/) | Medium |
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -148,4 +149,9 @@ Repository to store my answers for SQL LeetCode problems
 | ------- | ------- |
 | [0209-minimum-size-subarray-sum](https://github.com/klaajane/LeetCode/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0643-maximum-average-subarray-i](https://github.com/klaajane/LeetCode/tree/main/0643-maximum-average-subarray-i/) | Easy |
+| [1493-longest-subarray-of-1s-after-deleting-one-element](https://github.com/klaajane/LeetCode/tree/main/1493-longest-subarray-of-1s-after-deleting-one-element/) | Medium |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1493-longest-subarray-of-1s-after-deleting-one-element](https://github.com/klaajane/LeetCode/tree/main/1493-longest-subarray-of-1s-after-deleting-one-element/) | Medium |
 <!---LeetCode Topics End-->
