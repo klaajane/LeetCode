@@ -39,6 +39,7 @@ Repository to store my answers for SQL LeetCode problems
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/klaajane/LeetCode/tree/main/0015-3sum/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/klaajane/LeetCode/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0066-plus-one](https://github.com/klaajane/LeetCode/tree/main/0066-plus-one/) | Easy |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/klaajane/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
@@ -118,6 +119,7 @@ Repository to store my answers for SQL LeetCode problems
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/klaajane/LeetCode/tree/main/0015-3sum/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/klaajane/LeetCode/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/klaajane/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0189-rotate-array](https://github.com/klaajane/LeetCode/tree/main/0189-rotate-array/) | Medium |
@@ -130,6 +132,7 @@ Repository to store my answers for SQL LeetCode problems
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/klaajane/LeetCode/tree/main/0015-3sum/) | Medium |
 | [0169-majority-element](https://github.com/klaajane/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/klaajane/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 ## Heap (Priority Queue)
