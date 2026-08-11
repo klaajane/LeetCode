@@ -24,6 +24,7 @@ Repository to store my answers for SQL LeetCode problems
 | [3188-find-top-scoring-students-ii](https://github.com/klaajane/LeetCode/tree/main/3188-find-top-scoring-students-ii/) | Hard |
 | [3204-bitwise-user-permissions-analysis](https://github.com/klaajane/LeetCode/tree/main/3204-bitwise-user-permissions-analysis/) | Medium |
 | [3214-year-on-year-growth-rate](https://github.com/klaajane/LeetCode/tree/main/3214-year-on-year-growth-rate/) | Hard |
+| [3220-odd-and-even-transactions](https://github.com/klaajane/LeetCode/tree/main/3220-odd-and-even-transactions/) | Medium |
 | [3230-customer-purchasing-behavior-analysis](https://github.com/klaajane/LeetCode/tree/main/3230-customer-purchasing-behavior-analysis/) | Medium |
 | [3252-premier-league-table-ranking-ii](https://github.com/klaajane/LeetCode/tree/main/3252-premier-league-table-ranking-ii/) | Medium |
 | [3268-find-overlapping-shifts-ii](https://github.com/klaajane/LeetCode/tree/main/3268-find-overlapping-shifts-ii/) | Hard |
