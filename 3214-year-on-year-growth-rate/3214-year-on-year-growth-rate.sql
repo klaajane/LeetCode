@@ -1,41 +1,47 @@
 --------------------------------------------- SOLUTION ------------------------------------------
-WITH yearly_spend AS (
+WITH spend_by_product_year AS (
     SELECT
         product_id,
         EXTRACT(YEAR FROM transaction_date) AS year,
-        SUM(spend) AS curr_year_spend
-    FROM user_transactions
-    GROUP BY 
-        product_id,
-        EXTRACT(YEAR FROM transaction_date)
-),
+        SUM(spend) AS spend
+    FROM user_transactions 
+    GROUP BY product_id, EXTRACT(YEAR FROM transaction_date)
+    )
+,
 
-transactions_by_year AS (
+yoy_intermediate_calculation AS (
     SELECT
-        product_id,
         year,
-        curr_year_spend,
-        LAG(curr_year_spend) OVER (
-            PARTITION BY product_id 
+        product_id,
+        spend AS curr_year_spend,
+        LAG(spend) OVER (
+            PARTITION BY product_id
             ORDER BY year ASC
         ) AS prev_year_spend
-    FROM yearly_spend
-)
+    FROM spend_by_product_year
+    )
 
 SELECT
-    year,
-    product_id,
-    curr_year_spend,
-    prev_year_spend,
+    *,
     ROUND(
-        (curr_year_spend - prev_year_spend) * 100.0 
-        / NULLIF(prev_year_spend, 0), 
-        2
-    ) AS yoy_rate
-FROM transactions_by_year
-ORDER BY product_id, year;
+    (curr_year_spend - prev_year_spend) * 100.0 
+        / 
+    COALESCE(prev_year_spend, 0)
+     ,2) AS yoy_rate
+FROM yoy_intermediate_calculation
+ORDER BY 
+    product_id, 
+    year
 ---------------------------------------------- NOTES --------------------------------------------
---> find yoy growth for the total spend of each product
+--> GOAL:
+    --> calculate the YOY growth rate for the total spend for each product
+
+--> ORDER BY:
+    --> product_id ASC
+    --> year ASC
 -------------------------------------------------------------------------------------------------
 -- PAY ATTENTION: YOU HAVE TO GROUP BY TRANSACTIONS BY DATE FIRST BECAUSE THERE WILL
 -- ROWS WITH THE SAME YEAR FOR MANY RECORDS, SO THEY NEED BE GROUPED BEFORE COMPUTING THE YOY
+
+-- PAYYYY ATTENTION TO PROBLEM!!!!!
+-- How should the null for the first year be handlede
