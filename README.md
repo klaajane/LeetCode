@@ -43,6 +43,7 @@ Repository to store my answers for SQL LeetCode problems
 | [0001-two-sum](https://github.com/klaajane/LeetCode/tree/main/0001-two-sum/) | Easy |
 | [0015-3sum](https://github.com/klaajane/LeetCode/tree/main/0015-3sum/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/klaajane/LeetCode/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
+| [0049-group-anagrams](https://github.com/klaajane/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0066-plus-one](https://github.com/klaajane/LeetCode/tree/main/0066-plus-one/) | Easy |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/klaajane/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0169-majority-element](https://github.com/klaajane/LeetCode/tree/main/0169-majority-element/) | Easy |
@@ -65,6 +66,7 @@ Repository to store my answers for SQL LeetCode problems
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0049-group-anagrams](https://github.com/klaajane/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0067-add-binary](https://github.com/klaajane/LeetCode/tree/main/0067-add-binary/) | Easy |
 | [0383-ransom-note](https://github.com/klaajane/LeetCode/tree/main/0383-ransom-note/) | Easy |
 ## Bit Manipulation
@@ -101,6 +103,7 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/klaajane/LeetCode/tree/main/0001-two-sum/) | Easy |
+| [0049-group-anagrams](https://github.com/klaajane/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0169-majority-element](https://github.com/klaajane/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/klaajane/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0383-ransom-note](https://github.com/klaajane/LeetCode/tree/main/0383-ransom-note/) | Easy |
@@ -136,6 +139,7 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0015-3sum](https://github.com/klaajane/LeetCode/tree/main/0015-3sum/) | Medium |
+| [0049-group-anagrams](https://github.com/klaajane/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0169-majority-element](https://github.com/klaajane/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/klaajane/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 ## Heap (Priority Queue)
