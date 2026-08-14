@@ -67,6 +67,7 @@ Repository to store my answers for SQL LeetCode problems
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/klaajane/LeetCode/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0049-group-anagrams](https://github.com/klaajane/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0067-add-binary](https://github.com/klaajane/LeetCode/tree/main/0067-add-binary/) | Easy |
 | [0383-ransom-note](https://github.com/klaajane/LeetCode/tree/main/0383-ransom-note/) | Easy |
@@ -104,6 +105,7 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/klaajane/LeetCode/tree/main/0001-two-sum/) | Easy |
+| [0003-longest-substring-without-repeating-characters](https://github.com/klaajane/LeetCode/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0049-group-anagrams](https://github.com/klaajane/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0169-majority-element](https://github.com/klaajane/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/klaajane/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
@@ -159,6 +161,7 @@ Repository to store my answers for SQL LeetCode problems
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/klaajane/LeetCode/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0209-minimum-size-subarray-sum](https://github.com/klaajane/LeetCode/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0643-maximum-average-subarray-i](https://github.com/klaajane/LeetCode/tree/main/0643-maximum-average-subarray-i/) | Easy |
 | [1493-longest-subarray-of-1s-after-deleting-one-element](https://github.com/klaajane/LeetCode/tree/main/1493-longest-subarray-of-1s-after-deleting-one-element/) | Medium |
