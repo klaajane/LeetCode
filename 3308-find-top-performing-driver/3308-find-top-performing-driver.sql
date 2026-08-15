@@ -10,9 +10,9 @@ WITH metrics_by_driver_and_fuel_type AS (
         SUM(distance) AS distance,
         SUM(accidents) AS accidents
     FROM vehicles v
-    INNER JOIN trips t
+    INNER JOIN trips t -- all vehciles have been used
         ON v.vehicle_id = t.vehicle_id
-    INNER JOIN drivers d
+    INNER JOIN drivers d -- all drivers have at least a vehicle
         ON d.driver_id = v.driver_id
     GROUP BY 
         v.fuel_type, 
@@ -28,7 +28,7 @@ ranked_drivers_by_fuel_type AS (
         driver_id,
         rating,
         distance,
-        DENSE_RANK() OVER (
+        DENSE_RANK() OVER ( -- we need to continue the ranking sequence
             PARTITION BY fuel_type
             ORDER BY 
                 rating DESC,
