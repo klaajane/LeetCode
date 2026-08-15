@@ -1,6 +1,6 @@
 --------------------------------------------- SOLUTION ------------------------------------------
 --> STEP 1: apply DENSE_RANK() 
-WITH ranked_salaries AS (
+WITH ranked_salaries AS NOT MATERIALIZED (
     SELECT
         emp_id,
         dept,
