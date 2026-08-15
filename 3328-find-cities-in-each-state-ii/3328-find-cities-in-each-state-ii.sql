@@ -3,10 +3,10 @@ WITH state_cities_aggreggation AS (
     SELECT
         state,
 
-    -- STEP 1: combine the cities in a string (seperated by ,) (STRING_AGG)
+    -- STEP 1: combine the cities in a string (seperated by ,)
         STRING_AGG(city, ', ' ORDER BY city) AS cities,
 
-    -- STEP 2: Compare FIRST_LETTER (state) = FIRST_LETTER (city) (LEFT)
+    -- STEP 2: Compare FIRST_LETTER (state) = FIRST_LETTER (city)
         SUM(CASE WHEN LEFT(state, 1) = LEFT(city, 1) THEN 1 ELSE 0 END) AS matching_letter_count
 
     FROM cities
