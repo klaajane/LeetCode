@@ -7,10 +7,13 @@ WITH metrics_by_driver_and_fuel_type AS (
         v.fuel_type,
         v.driver_id,
         ROUND(AVG(rating), 2) AS rating,
-        SUM(distance) AS distance 
+        SUM(distance) AS distance,
+        SUM(accidents) AS accidents
     FROM vehicles v
     INNER JOIN trips t
         ON v.vehicle_id = t.vehicle_id
+    INNER JOIN drivers d
+        ON d.driver_id = v.driver_id
     GROUP BY 
         v.fuel_type, 
         v.driver_id
@@ -21,20 +24,18 @@ WITH metrics_by_driver_and_fuel_type AS (
 
 ranked_drivers_by_fuel_type AS (
     SELECT
-        m.fuel_type,
-        m.driver_id,
-        m.rating,
-        m.distance,
+        fuel_type,
+        driver_id,
+        rating,
+        distance,
         DENSE_RANK() OVER (
-            PARTITION BY m.fuel_type
+            PARTITION BY fuel_type
             ORDER BY 
-                m.rating DESC,
-                m.distance DESC,
-                d.accidents ASC
+                rating DESC,
+                distance DESC,
+                accidents ASC
         ) AS rnk
-    FROM metrics_by_driver_and_fuel_type m
-    INNER JOIN drivers d
-        ON d.driver_id = m.driver_id
+    FROM metrics_by_driver_and_fuel_type
     )   
 
 SELECT
