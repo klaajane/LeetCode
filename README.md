@@ -7,6 +7,7 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0569-median-employee-salary](https://github.com/klaajane/LeetCode/tree/main/0569-median-employee-salary/) | Hard |
+| [0580-count-student-number-in-departments](https://github.com/klaajane/LeetCode/tree/main/0580-count-student-number-in-departments/) | Medium |
 | [0602-friend-requests-ii-who-has-the-most-friends](https://github.com/klaajane/LeetCode/tree/main/0602-friend-requests-ii-who-has-the-most-friends/) | Medium |
 | [1336-number-of-transactions-per-visit](https://github.com/klaajane/LeetCode/tree/main/1336-number-of-transactions-per-visit/) | Hard |
 | [1355-activity-participants](https://github.com/klaajane/LeetCode/tree/main/1355-activity-participants/) | Medium |
