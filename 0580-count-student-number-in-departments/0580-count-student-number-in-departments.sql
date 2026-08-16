@@ -9,7 +9,7 @@ RIGHT JOIN
 GROUP BY
     d.dept_name
 ORDER BY
-    student_number DESC, dept_name ASC
+    student_number DESC, dept_name
 ---------------------------------------------- NOTES --------------------------------------------
 --> report depart. and # of students (even with 0 students)
 --> order by student_number DESC, dept_name DESC (in case of a tie)
