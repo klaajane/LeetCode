@@ -15,7 +15,7 @@ SELECT
     CASE WHEN  dna_sequence LIKE '%ATAT%'THEN 1 ELSE 0 END AS has_atat,
 
 -- condition 4: at least consecutive 3 G's 
-    CASE WHEN dna_sequence ~ 'G{3,}' THEN 1 ELSE 0 END AS has_ggg
+    CASE WHEN dna_sequence LIKE '%GGG%' THEN 1 ELSE 0 END AS has_ggg
 
 FROM samples
 ORDER BY sample_id ASC
