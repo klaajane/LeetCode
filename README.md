@@ -38,6 +38,7 @@ Repository to store my answers for SQL LeetCode problems
 | [3368-first-letter-capitalization](https://github.com/klaajane/LeetCode/tree/main/3368-first-letter-capitalization/) | Hard |
 | [3384-team-dominance-by-pass-success](https://github.com/klaajane/LeetCode/tree/main/3384-team-dominance-by-pass-success/) | Hard |
 | [3401-find-circular-gift-exchange-chains](https://github.com/klaajane/LeetCode/tree/main/3401-find-circular-gift-exchange-chains/) | Hard |
+| [3475-dna-pattern-recognition](https://github.com/klaajane/LeetCode/tree/main/3475-dna-pattern-recognition/) | Medium |
 | [3482-analyze-organization-hierarchy](https://github.com/klaajane/LeetCode/tree/main/3482-analyze-organization-hierarchy/) | Hard |
 ## Array
 | Problem Name | Difficulty |
