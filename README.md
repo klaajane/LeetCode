@@ -133,6 +133,7 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0015-3sum](https://github.com/klaajane/LeetCode/tree/main/0015-3sum/) | Medium |
+| [0019-remove-nth-node-from-end-of-list](https://github.com/klaajane/LeetCode/tree/main/0019-remove-nth-node-from-end-of-list/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/klaajane/LeetCode/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0141-linked-list-cycle](https://github.com/klaajane/LeetCode/tree/main/0141-linked-list-cycle/) | Easy |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/klaajane/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
@@ -176,6 +177,7 @@ Repository to store my answers for SQL LeetCode problems
 ## Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0019-remove-nth-node-from-end-of-list](https://github.com/klaajane/LeetCode/tree/main/0019-remove-nth-node-from-end-of-list/) | Medium |
 | [0141-linked-list-cycle](https://github.com/klaajane/LeetCode/tree/main/0141-linked-list-cycle/) | Easy |
 | [0206-reverse-linked-list](https://github.com/klaajane/LeetCode/tree/main/0206-reverse-linked-list/) | Easy |
 ## Recursion
