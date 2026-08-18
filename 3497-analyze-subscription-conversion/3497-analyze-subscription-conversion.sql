@@ -10,5 +10,8 @@ JOIN useractivity u2
     ON u1.activity_type = 'free_trial'
     AND u2.activity_type = 'paid'
     AND u1.user_id = u2.user_id
+    AND u1.activity_date < u2.activity_date
 GROUP BY u1.user_id
 ORDER BY user_id
+
+--- USE AVG(CASE) INSTEAD BETTER APPROCH !!!!!!
