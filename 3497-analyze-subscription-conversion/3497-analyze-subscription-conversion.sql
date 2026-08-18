@@ -1,30 +1,14 @@
--------------------------------------------- SOLUTION -------------------------------------------
-SELECT
-    user_id,
-    --- trial average duration:
-    ROUND(
-        AVG(CASE
-                WHEN activity_type = 'free_trial' THEN activity_duration
-              END)
-        ,2) AS "trial_avg_duration",
-    
-    --- paid average duration
-    ROUND(
-        AVG(CASE
-                WHEN activity_type = 'paid' THEN activity_duration
-              END)
-        ,2) AS "paid_avg_duration"
-FROM
-    UserActivity
-WHERE
-    activity_type IN ('free_trial','paid')
-GROUP BY
-    user_id
-HAVING 
-    COUNT(DISTINCT activity_type) = 2
----------------------------------------------- NOTES --------------------------------------------
---> query: users who converted from free trail to paid subscription
---> calculate AVG daily activity duration during the free trial (round to 2 decimals)
---> calculate AVG daily activity duration during the paid trial (round to 2 decimals)
---> order by user_id ASC
--------------------------------------------------------------------------------------------------
+-- MAX() / aggreggation problem:
+
+-- STEP 1: 
+SELECT 
+    u1.user_id,
+    ROUND(AVG(u1.activity_duration) , 2) AS trial_avg_duration,
+    ROUND(AVG(u2.activity_duration) , 2) AS paid_avg_duration
+FROM useractivity u1
+JOIN useractivity u2
+    ON u1.activity_type = 'free_trial'
+    AND u2.activity_type = 'paid'
+    AND u1.user_id = u2.user_id
+GROUP BY u1.user_id
+ORDER BY user_id
