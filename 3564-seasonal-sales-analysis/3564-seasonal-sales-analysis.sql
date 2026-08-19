@@ -50,4 +50,3 @@ SELECT
 FROM master_final
 WHERE rnk = 1
 ORDER BY season
--- don't use window function with group by because the window function 
