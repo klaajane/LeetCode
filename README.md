@@ -41,6 +41,7 @@ Repository to store my answers for SQL LeetCode problems
 | [3475-dna-pattern-recognition](https://github.com/klaajane/LeetCode/tree/main/3475-dna-pattern-recognition/) | Medium |
 | [3482-analyze-organization-hierarchy](https://github.com/klaajane/LeetCode/tree/main/3482-analyze-organization-hierarchy/) | Hard |
 | [3497-analyze-subscription-conversion](https://github.com/klaajane/LeetCode/tree/main/3497-analyze-subscription-conversion/) | Medium |
+| [3521-find-product-recommendation-pairs](https://github.com/klaajane/LeetCode/tree/main/3521-find-product-recommendation-pairs/) | Medium |
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
