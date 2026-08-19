@@ -42,6 +42,7 @@ Repository to store my answers for SQL LeetCode problems
 | [3482-analyze-organization-hierarchy](https://github.com/klaajane/LeetCode/tree/main/3482-analyze-organization-hierarchy/) | Hard |
 | [3497-analyze-subscription-conversion](https://github.com/klaajane/LeetCode/tree/main/3497-analyze-subscription-conversion/) | Medium |
 | [3521-find-product-recommendation-pairs](https://github.com/klaajane/LeetCode/tree/main/3521-find-product-recommendation-pairs/) | Medium |
+| [3554-find-category-recommendation-pairs](https://github.com/klaajane/LeetCode/tree/main/3554-find-category-recommendation-pairs/) | Hard |
 | [3564-seasonal-sales-analysis](https://github.com/klaajane/LeetCode/tree/main/3564-seasonal-sales-analysis/) | Medium |
 ## Array
 | Problem Name | Difficulty |
