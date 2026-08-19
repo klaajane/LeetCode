@@ -67,6 +67,7 @@ Repository to store my answers for SQL LeetCode problems
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0002-add-two-numbers](https://github.com/klaajane/LeetCode/tree/main/0002-add-two-numbers/) | Medium |
 | [0066-plus-one](https://github.com/klaajane/LeetCode/tree/main/0066-plus-one/) | Easy |
 | [0067-add-binary](https://github.com/klaajane/LeetCode/tree/main/0067-add-binary/) | Easy |
 | [0069-sqrtx](https://github.com/klaajane/LeetCode/tree/main/0069-sqrtx/) | Easy |
@@ -183,6 +184,7 @@ Repository to store my answers for SQL LeetCode problems
 ## Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0002-add-two-numbers](https://github.com/klaajane/LeetCode/tree/main/0002-add-two-numbers/) | Medium |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/klaajane/LeetCode/tree/main/0019-remove-nth-node-from-end-of-list/) | Medium |
 | [0021-merge-two-sorted-lists](https://github.com/klaajane/LeetCode/tree/main/0021-merge-two-sorted-lists/) | Easy |
 | [0141-linked-list-cycle](https://github.com/klaajane/LeetCode/tree/main/0141-linked-list-cycle/) | Easy |
@@ -190,6 +192,7 @@ Repository to store my answers for SQL LeetCode problems
 ## Recursion
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0002-add-two-numbers](https://github.com/klaajane/LeetCode/tree/main/0002-add-two-numbers/) | Medium |
 | [0021-merge-two-sorted-lists](https://github.com/klaajane/LeetCode/tree/main/0021-merge-two-sorted-lists/) | Easy |
 | [0206-reverse-linked-list](https://github.com/klaajane/LeetCode/tree/main/0206-reverse-linked-list/) | Easy |
 ## Floyd's Cycle Finding Algorithm
