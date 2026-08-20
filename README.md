@@ -44,6 +44,7 @@ Repository to store my answers for SQL LeetCode problems
 | [3521-find-product-recommendation-pairs](https://github.com/klaajane/LeetCode/tree/main/3521-find-product-recommendation-pairs/) | Medium |
 | [3554-find-category-recommendation-pairs](https://github.com/klaajane/LeetCode/tree/main/3554-find-category-recommendation-pairs/) | Hard |
 | [3564-seasonal-sales-analysis](https://github.com/klaajane/LeetCode/tree/main/3564-seasonal-sales-analysis/) | Medium |
+| [3580-find-consistently-improving-employees](https://github.com/klaajane/LeetCode/tree/main/3580-find-consistently-improving-employees/) | Medium |
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
