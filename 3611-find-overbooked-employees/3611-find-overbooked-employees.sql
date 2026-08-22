@@ -1,41 +1,35 @@
--------------------------------------------- SOLUTION -------------------------------------------
-WITH weekly_meetings_count AS (SELECT
-                                    m.employee_id,
-                                    e.employee_name,
-                                    e.department,
-                                    SUM(m.duration_hours) AS total_hours
-                                FROM
-                                    meetings m
-                                INNER JOIN
-                                    employees e
-                                    ON
-                                    e.employee_id = m.employee_id
-                                GROUP BY
-                                    m.employee_id,
-                                    e.employee_name,
-                                    e.department,
-                                    TO_CHAR(meeting_date, 'IYYY-IW'))
+WITH duration_hours_by_week AS (
+    SELECT
+        employee_id,
+        EXTRACT(WEEK FROM meeting_date) AS week,
+        EXTRACT(YEAR FROM meeting_date) AS year,
+        SUM(duration_hours) AS weekly_duration_hours
+    FROM meetings
+    GROUP BY 
+        employee_id, 
+        EXTRACT(WEEK FROM meeting_date),
+        EXTRACT(YEAR FROM meeting_date)
+    )
+,
+
+meeting_heavy_employees AS (
+    SELECT
+        employee_id,
+        COUNT(*) AS meeting_heavy_weeks
+    FROM duration_hours_by_week
+    WHERE weekly_duration_hours > 20
+    GROUP BY employee_id, year
+    HAVING COUNT(*) >= 2
+    )
+
 SELECT
-    employee_id,
-    employee_name,
-    department,
-    COUNT(employee_id) AS meeting_heavy_weeks
-FROM
-    weekly_meetings_count
-WHERE
-    total_hours > 20
-GROUP BY
-    employee_id,
-    employee_name,
-    department
-HAVING
-    COUNT(employee_id) >= 2
-ORDER BY
-    COUNT(employee_id) DESC,
-    employee_name ASC
----------------------------------------------- NOTES --------------------------------------------
---> find employees who are meeting_heavy (> 50% of time spent in meetings)
---> calculate total meeting hours per employee / week (M to Sunday)
---> count # of meeting-heavy weeks (only include >= 2 meeting-heavy weeks)
---> order by # of meeting-heavy weeks DESC, employee ASC
--------------------------------------------------------------------------------------------------
+    m.employee_id,
+    e.employee_name,
+    e.department,
+    m.meeting_heavy_weeks
+FROM meeting_heavy_employees m
+INNER JOIN employees e
+    ON e.employee_id = m.employee_id
+ORDER BY 
+    meeting_heavy_weeks DESC,
+    employee_name
