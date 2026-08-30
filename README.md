@@ -212,8 +212,13 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/klaajane/LeetCode/tree/main/0020-valid-parentheses/) | Easy |
+| [0155-min-stack](https://github.com/klaajane/LeetCode/tree/main/0155-min-stack/) | Medium |
 ## Bracket Sequences
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/klaajane/LeetCode/tree/main/0020-valid-parentheses/) | Easy |
+## Design
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0155-min-stack](https://github.com/klaajane/LeetCode/tree/main/0155-min-stack/) | Medium |
 <!---LeetCode Topics End-->
