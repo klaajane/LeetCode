@@ -80,6 +80,7 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/klaajane/LeetCode/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
+| [0020-valid-parentheses](https://github.com/klaajane/LeetCode/tree/main/0020-valid-parentheses/) | Easy |
 | [0049-group-anagrams](https://github.com/klaajane/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0067-add-binary](https://github.com/klaajane/LeetCode/tree/main/0067-add-binary/) | Easy |
 | [0383-ransom-note](https://github.com/klaajane/LeetCode/tree/main/0383-ransom-note/) | Easy |
@@ -207,4 +208,12 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0011-container-with-most-water](https://github.com/klaajane/LeetCode/tree/main/0011-container-with-most-water/) | Medium |
+## Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0020-valid-parentheses](https://github.com/klaajane/LeetCode/tree/main/0020-valid-parentheses/) | Easy |
+## Bracket Sequences
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0020-valid-parentheses](https://github.com/klaajane/LeetCode/tree/main/0020-valid-parentheses/) | Easy |
 <!---LeetCode Topics End-->
