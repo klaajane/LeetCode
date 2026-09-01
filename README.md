@@ -63,6 +63,7 @@ Repository to store my answers for SQL LeetCode problems
 | [0238-product-of-array-except-self](https://github.com/klaajane/LeetCode/tree/main/0238-product-of-array-except-self/) | Medium |
 | [0283-move-zeroes](https://github.com/klaajane/LeetCode/tree/main/0283-move-zeroes/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/klaajane/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0496-next-greater-element-i](https://github.com/klaajane/LeetCode/tree/main/0496-next-greater-element-i/) | Easy |
 | [0560-subarray-sum-equals-k](https://github.com/klaajane/LeetCode/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0643-maximum-average-subarray-i](https://github.com/klaajane/LeetCode/tree/main/0643-maximum-average-subarray-i/) | Easy |
 | [0739-daily-temperatures](https://github.com/klaajane/LeetCode/tree/main/0739-daily-temperatures/) | Medium |
@@ -125,6 +126,7 @@ Repository to store my answers for SQL LeetCode problems
 | [0169-majority-element](https://github.com/klaajane/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/klaajane/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0383-ransom-note](https://github.com/klaajane/LeetCode/tree/main/0383-ransom-note/) | Easy |
+| [0496-next-greater-element-i](https://github.com/klaajane/LeetCode/tree/main/0496-next-greater-element-i/) | Easy |
 | [0560-subarray-sum-equals-k](https://github.com/klaajane/LeetCode/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [1394-find-lucky-integer-in-an-array](https://github.com/klaajane/LeetCode/tree/main/1394-find-lucky-integer-in-an-array/) | Easy |
 ## Counting
@@ -214,6 +216,7 @@ Repository to store my answers for SQL LeetCode problems
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/klaajane/LeetCode/tree/main/0020-valid-parentheses/) | Easy |
 | [0155-min-stack](https://github.com/klaajane/LeetCode/tree/main/0155-min-stack/) | Medium |
+| [0496-next-greater-element-i](https://github.com/klaajane/LeetCode/tree/main/0496-next-greater-element-i/) | Easy |
 | [0739-daily-temperatures](https://github.com/klaajane/LeetCode/tree/main/0739-daily-temperatures/) | Medium |
 ## Bracket Sequences
 | Problem Name | Difficulty |
@@ -226,5 +229,6 @@ Repository to store my answers for SQL LeetCode problems
 ## Monotonic Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0496-next-greater-element-i](https://github.com/klaajane/LeetCode/tree/main/0496-next-greater-element-i/) | Easy |
 | [0739-daily-temperatures](https://github.com/klaajane/LeetCode/tree/main/0739-daily-temperatures/) | Medium |
 <!---LeetCode Topics End-->
