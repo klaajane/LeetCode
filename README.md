@@ -9,6 +9,7 @@ Repository to store my answers for SQL LeetCode problems
 | [0569-median-employee-salary](https://github.com/klaajane/LeetCode/tree/main/0569-median-employee-salary/) | Hard |
 | [0580-count-student-number-in-departments](https://github.com/klaajane/LeetCode/tree/main/0580-count-student-number-in-departments/) | Medium |
 | [0602-friend-requests-ii-who-has-the-most-friends](https://github.com/klaajane/LeetCode/tree/main/0602-friend-requests-ii-who-has-the-most-friends/) | Medium |
+| [1159-market-analysis-ii](https://github.com/klaajane/LeetCode/tree/main/1159-market-analysis-ii/) | Hard |
 | [1336-number-of-transactions-per-visit](https://github.com/klaajane/LeetCode/tree/main/1336-number-of-transactions-per-visit/) | Hard |
 | [1355-activity-participants](https://github.com/klaajane/LeetCode/tree/main/1355-activity-participants/) | Medium |
 | [2051-the-category-of-each-member-in-the-store](https://github.com/klaajane/LeetCode/tree/main/2051-the-category-of-each-member-in-the-store/) | Medium |
