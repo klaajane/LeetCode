@@ -86,6 +86,7 @@ Repository to store my answers for SQL LeetCode problems
 | [0020-valid-parentheses](https://github.com/klaajane/LeetCode/tree/main/0020-valid-parentheses/) | Easy |
 | [0049-group-anagrams](https://github.com/klaajane/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0067-add-binary](https://github.com/klaajane/LeetCode/tree/main/0067-add-binary/) | Easy |
+| [0316-remove-duplicate-letters](https://github.com/klaajane/LeetCode/tree/main/0316-remove-duplicate-letters/) | Medium |
 | [0383-ransom-note](https://github.com/klaajane/LeetCode/tree/main/0383-ransom-note/) | Easy |
 | [0402-remove-k-digits](https://github.com/klaajane/LeetCode/tree/main/0402-remove-k-digits/) | Medium |
 ## Bit Manipulation
@@ -213,12 +214,14 @@ Repository to store my answers for SQL LeetCode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0011-container-with-most-water](https://github.com/klaajane/LeetCode/tree/main/0011-container-with-most-water/) | Medium |
+| [0316-remove-duplicate-letters](https://github.com/klaajane/LeetCode/tree/main/0316-remove-duplicate-letters/) | Medium |
 | [0402-remove-k-digits](https://github.com/klaajane/LeetCode/tree/main/0402-remove-k-digits/) | Medium |
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/klaajane/LeetCode/tree/main/0020-valid-parentheses/) | Easy |
 | [0155-min-stack](https://github.com/klaajane/LeetCode/tree/main/0155-min-stack/) | Medium |
+| [0316-remove-duplicate-letters](https://github.com/klaajane/LeetCode/tree/main/0316-remove-duplicate-letters/) | Medium |
 | [0402-remove-k-digits](https://github.com/klaajane/LeetCode/tree/main/0402-remove-k-digits/) | Medium |
 | [0496-next-greater-element-i](https://github.com/klaajane/LeetCode/tree/main/0496-next-greater-element-i/) | Easy |
 | [0739-daily-temperatures](https://github.com/klaajane/LeetCode/tree/main/0739-daily-temperatures/) | Medium |
@@ -233,6 +236,7 @@ Repository to store my answers for SQL LeetCode problems
 ## Monotonic Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0316-remove-duplicate-letters](https://github.com/klaajane/LeetCode/tree/main/0316-remove-duplicate-letters/) | Medium |
 | [0402-remove-k-digits](https://github.com/klaajane/LeetCode/tree/main/0402-remove-k-digits/) | Medium |
 | [0496-next-greater-element-i](https://github.com/klaajane/LeetCode/tree/main/0496-next-greater-element-i/) | Easy |
 | [0739-daily-temperatures](https://github.com/klaajane/LeetCode/tree/main/0739-daily-temperatures/) | Medium |
