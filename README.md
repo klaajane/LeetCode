@@ -67,6 +67,7 @@ Repository to store my answers for SQL LeetCode problems
 | [0496-next-greater-element-i](https://github.com/klaajane/LeetCode/tree/main/0496-next-greater-element-i/) | Easy |
 | [0560-subarray-sum-equals-k](https://github.com/klaajane/LeetCode/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0643-maximum-average-subarray-i](https://github.com/klaajane/LeetCode/tree/main/0643-maximum-average-subarray-i/) | Easy |
+| [0704-binary-search](https://github.com/klaajane/LeetCode/tree/main/0704-binary-search/) | Easy |
 | [0739-daily-temperatures](https://github.com/klaajane/LeetCode/tree/main/0739-daily-temperatures/) | Medium |
 | [1394-find-lucky-integer-in-an-array](https://github.com/klaajane/LeetCode/tree/main/1394-find-lucky-integer-in-an-array/) | Easy |
 | [1480-running-sum-of-1d-array](https://github.com/klaajane/LeetCode/tree/main/1480-running-sum-of-1d-array/) | Easy |
@@ -103,6 +104,7 @@ Repository to store my answers for SQL LeetCode problems
 | [0069-sqrtx](https://github.com/klaajane/LeetCode/tree/main/0069-sqrtx/) | Easy |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/klaajane/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0209-minimum-size-subarray-sum](https://github.com/klaajane/LeetCode/tree/main/0209-minimum-size-subarray-sum/) | Medium |
+| [0704-binary-search](https://github.com/klaajane/LeetCode/tree/main/0704-binary-search/) | Easy |
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
