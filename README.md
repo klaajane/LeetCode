@@ -14,6 +14,7 @@ Repository to store my answers for SQL LeetCode problems
 | [1336-number-of-transactions-per-visit](https://github.com/klaajane/LeetCode/tree/main/1336-number-of-transactions-per-visit/) | Hard |
 | [1355-activity-participants](https://github.com/klaajane/LeetCode/tree/main/1355-activity-participants/) | Medium |
 | [1369-get-the-second-most-recent-activity](https://github.com/klaajane/LeetCode/tree/main/1369-get-the-second-most-recent-activity/) | Hard |
+| [1412-find-the-quiet-students-in-all-exams](https://github.com/klaajane/LeetCode/tree/main/1412-find-the-quiet-students-in-all-exams/) | Hard |
 | [2051-the-category-of-each-member-in-the-store](https://github.com/klaajane/LeetCode/tree/main/2051-the-category-of-each-member-in-the-store/) | Medium |
 | [2084-drop-type-1-orders-for-customers-with-type-0-orders](https://github.com/klaajane/LeetCode/tree/main/2084-drop-type-1-orders-for-customers-with-type-0-orders/) | Medium |
 | [2112-the-airport-with-the-most-traffic](https://github.com/klaajane/LeetCode/tree/main/2112-the-airport-with-the-most-traffic/) | Medium |
