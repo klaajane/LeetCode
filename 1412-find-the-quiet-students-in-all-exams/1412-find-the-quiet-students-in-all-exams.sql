@@ -15,13 +15,12 @@
         SELECT
             student_id,
             score,
-            MAX(score) OVER (
-                PARTITION BY exam_id
-            ) AS max_score,
-            MIN(score) OVER (
-                PARTITION BY exam_id
-            ) AS min_score
+            MAX(score) OVER w AS max_score,
+            MIN(score) OVER w AS min_score
         FROM exam 
+        WINDOW w AS (
+            PARTITION BY exam_id
+        ) 
     )
     ,
     -- 2./ Compare scores to the MAX and MIN (CASE)
