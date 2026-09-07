@@ -1,40 +1,40 @@
--------------------------------------------- SOLUTION -------------------------------------------
-WITH ranked_activity AS (
-    SELECT
+-- GOAL:
+    --> show the second most recent activity for each user
+
+-- pseucode:
+    --> DENSE_RANK() vs. RANK():
+        --> DENSE_RANK() handles ties better
+
+WITH ranked_activities AS (
+    SELECT DISTINCT
         *,
-        ROW_NUMBER() OVER (PARTITION BY username
-                            ORDER BY startDate DESC) AS rnk
-    FROM
-        UserActivity
-),
-
-users_second_most_recent_activity AS (
-    SELECT
-        username,
-        activity,
-        startDate,
-        endDate
-    FROM
-        ranked_activity
-    WHERE
-        rnk = 2
-),
-
-user_with_one_activity AS (
-    SELECT * FROM UserActivity
-    WHERE (username, startDate, endDate) IN ( SELECT 
-                                                username,
-                                                MAX(startDate),
-                                                MIN(endDate)
-                                             FROM
-                                                UserActivity
-                                             GROUP BY 1)
+        DENSE_RANK() OVER (
+            PARTITION BY username
+            ORDER BY startDate DESC
+        ) AS rnk
+    FROM UserActivity
 )
+,
 
-SELECT * FROM users_second_most_recent_activity
-    UNION
-SELECT * FROM user_with_one_activity
----------------------------------------------- NOTES --------------------------------------------
---> write a solution to show the 2nd most recent activity of each user
---> if user has 1 activity, return it. A user cannot perform more than one activity at the same time
--------------------------------------------------------------------------------------------------
+answer AS (
+SELECT
+    username,
+    activity,
+    startDate,
+    endDate
+FROM ranked_activities
+WHERE rnk = 2
+
+    UNION ALL
+
+SELECT
+    *
+FROM UserActivity
+WHERE username IN (
+    SELECT username
+    FROM UserActivity
+    GROUP BY 1
+    HAVING COUNT(*) = 1
+))
+
+SELECT * FROM answer
