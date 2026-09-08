@@ -4,12 +4,20 @@ class Solution:
         anagram_helper = {}
 
         for word in strs:
-            sorted_words = sorted(word)
-            key = tuple(sorted_words)
+            sorted_word = sorted(word)
+            key = tuple(sorted_word)
 
             if key not in anagram_helper:
                 anagram_helper[key] = [word]
+
             else:
                 anagram_helper[key].append(word)
+            
+        ans = list(anagram_helper.values())
+
+        return ans
+
         
-        return list(anagram_helper.values())
+
+
+        
