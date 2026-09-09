@@ -1,40 +1,27 @@
---------------------------------------------- SOLUTION ------------------------------------------
-WITH product_counts AS (
+WITH orders_ranked AS (
     SELECT
-        o.product_id,
         o.customer_id,
-        COUNT(o.*) AS "product_count",
-        p.product_name
-    FROM
-        orders o
-    INNER JOIN
-        products p
-        ON p.product_id = o.product_id
-    GROUP BY 1, 2, 4
-    ORDER BY 2),
-
-product_count_ranked AS(
-    SELECT
-        customer_id,
-        product_id,
-        product_name,
-        DENSE_RANK() OVER (PARTITION BY customer_id
-                            ORDER BY product_count DESC) AS rnk
-    FROM
-        product_counts
-    ---GROUP BY 1, 2, 3, product_count
-    --HAVING product_count = MAX(product_count)
-    ORDER BY 1)
+        o.product_id,
+        COUNT(o.product_id) AS order_count,
+        DENSE_RANK() OVER (
+            PARTITION BY customer_id
+            ORDER BY COUNT(o.product_id) DESC
+        ) AS rnk
+    FROM orders o
+    GROUP BY 
+        o.customer_id,
+        o.product_id
+)
 
 SELECT
-    customer_id,
-    product_id,
-    product_name
-FROM
-    product_count_ranked
-WHERE
-    rnk = 1
----------------------------------------------- NOTES --------------------------------------------
---> find the most frequently ordered product for each customer
---> report product_id, product_name, and customer_id who ordered at least one order
--------------------------------------------------------------------------------------------------
+    o.customer_id,
+    o.product_id,
+    p.product_name
+FROM orders_ranked o
+INNER JOIN products p
+    ON p.product_id = o.product_id 
+WHERE rnk = 1
+
+-- orders table grain is defined as one order per product per day per customer
+-- should we return both products in case there's a tie?
+-- 
