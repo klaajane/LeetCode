@@ -17,6 +17,7 @@ Repository to store my answers for SQL LeetCode problems
 | [1412-find-the-quiet-students-in-all-exams](https://github.com/klaajane/LeetCode/tree/main/1412-find-the-quiet-students-in-all-exams/) | Hard |
 | [1459-rectangles-area](https://github.com/klaajane/LeetCode/tree/main/1459-rectangles-area/) | Medium |
 | [1596-the-most-frequently-ordered-products-for-each-customer](https://github.com/klaajane/LeetCode/tree/main/1596-the-most-frequently-ordered-products-for-each-customer/) | Medium |
+| [1811-find-interview-candidates](https://github.com/klaajane/LeetCode/tree/main/1811-find-interview-candidates/) | Medium |
 | [2051-the-category-of-each-member-in-the-store](https://github.com/klaajane/LeetCode/tree/main/2051-the-category-of-each-member-in-the-store/) | Medium |
 | [2084-drop-type-1-orders-for-customers-with-type-0-orders](https://github.com/klaajane/LeetCode/tree/main/2084-drop-type-1-orders-for-customers-with-type-0-orders/) | Medium |
 | [2112-the-airport-with-the-most-traffic](https://github.com/klaajane/LeetCode/tree/main/2112-the-airport-with-the-most-traffic/) | Medium |
