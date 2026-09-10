@@ -1,53 +1,63 @@
---------------------------------------------- SOLUTION ------------------------------------------
-WITH gold_medal_winner AS (
-    SELECT
-        gold_medal AS "winner_id"
-    FROM
-        contests
-    GROUP BY 1
-    HAVING COUNT(*) >= 3),
+--> GOAL:
+    --> find name and mail of interview candidates using the following conditions:
+        --> won 3 medals in 3 consecutive contests
+        --> won a gold medal
 
-all_winners AS (
-    SELECT contest_id, gold_medal "winner_id" FROM contests
-        UNION ALL
-    SELECT contest_id, silver_medal "winner_id" FROM contests
-        UNION ALL
-    SELECT contest_id, bronze_medal "winner_id" FROM contests),
+--> pseucode:
+    --> data prep:
 
-contest_streak AS (
+    WITH contests_reshaped AS (
+    SELECT contest_id, gold_medal AS winner_id, 'gold' AS medal_type FROM contests
+        UNION ALL
+    SELECT contest_id, silver_medal AS winner_id, 'silver' AS medal_type FROM contests
+        UNION ALL
+    SELECT contest_id, bronze_medal AS winner_id, 'bronze' AS medal_type FROM contests
+    )
+
+    --> 1/ find users who won medals in 3 consecutive contests
+,
+
+winners_gap_and_island AS (
     SELECT
-        contest_id,
         winner_id,
+        contest_id,
         contest_id
         -
         ROW_NUMBER() OVER (PARTITION BY winner_id ORDER BY contest_id)
-        AS "grp"
-    FROM
-        all_winners
-    ORDER BY 2, 1),
+        AS island_id
+    FROM contests_reshaped
+)
+,
 
-qualified_winners AS(
+consecutive_wins_condition AS (
     SELECT DISTINCT
         winner_id
-    FROM
-        contest_streak
-    GROUP BY 1, grp
+    FROM winners_gap_and_island
+    GROUP BY winner_id, island_id
+    HAVING COUNT(island_id) >= 3
+)
+
+    --> 2/ won the gold medal in 3 or more different contests
+,
+
+gold_medal_condition AS (
+    SELECT winner_id
+    FROM contests_reshaped
+    WHERE medal_type = 'gold'
+    GROUP BY winner_id
     HAVING COUNT(*) >= 3
+)
+,
 
-        UNION
-
-    SELECT winner_id FROM gold_medal_winner)
+qualified_winners AS (
+    SELECT winner_id FROM consecutive_wins_condition
+    UNION 
+    SELECT winner_id FROM gold_medal_condition
+)
 
 SELECT
     u.name,
     u.mail
-FROM
-    users u
-INNER JOIN
-    qualified_winners q
+FROM qualified_winners q
+INNER JOIN users u
     ON q.winner_id = u.user_id
----------------------------------------------- NOTES --------------------------------------------
---> report name and mail of all interview candidates
---> interview candidate: won any 3 or more medals consecutively, 
-                    --   won 3 gold medal not necessarily consecutive
--------------------------------------------------------------------------------------------------
